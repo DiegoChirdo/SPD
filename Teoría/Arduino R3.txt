@@ -1,0 +1,28 @@
+Las entradas se escriben, las salidas se leen.
+
+pinMode(pin, modo);
+Pin = número de PIN
+Modo = OUTPUT, o INPUT
+_________________-
+
+digitalWrite()
+digitalWrite (pin, modo)
+pin = numero de pin
+modo= LOW o HIGH.
+_________________---
+
+delay:
+delay(x); (Espera para por x milisegundos) ===> Cuelga el programa durante todo ese tiempo.
+
+____________________-
+ 
+void setup ()
+{
+	pinMode(13, OUTPUT);
+}
+
+void loop ()
+{
+	digitalWrite(13, HIGH);
+	digitalWrite(13, LOW);
+}

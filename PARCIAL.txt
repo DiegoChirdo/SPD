@@ -1,1 +1,10 @@
 24/4 PRIMER PARCIAL
+temas:
+
+1. historeia de la computacion (generaciones)
+2. arquitecturas (csc, risk)
+3. binarios (comparacion - bit de signo)
+4. binarios pto flotantes.
+5. paridad y hamming.
+6. electronica (ley de ohm, calculo de resistencias, potencias, kirchoff)
+7. arduino (resistencias, leds, y pulsadores) (PUEDE SER: cablear el arduino, y el código)

@@ -1,0 +1,133 @@
+
+
+				Algebra de Boole
+
+		Sistema para crear proposiciones lógicas:
+
+V o F = V
+
+V y F = F
+
+________________________________________________________________________________________________
+    _		       _
+A y B o C o D = Si A y B se cumple es VERDADERO.
+		o si C o D se cumplen es VERDADERO.
+ _
+AB+( +o)= V
+
+________________________________________________________________________________________________________
+
+
+			 TABLA DE VERDAD
+			|	 OR	  |
+			|	A|B|H     |
+A<---------		|	0|0|0     |	B + A + AB = H
+      | ? | = H  	|	0|1|1     |	
+B<---------		|	1|0|1     |	A + B = H
+			|	1|1|1     |
+			|		  |
+
+			 TABLA DE VERDAD
+	_____		|	 AND	  |
+ A<-----|    |   	|	A|B|G	  |
+	|    |____	|	0|0|0	  |	G = AB
+	|    |	G |	|	0|1|0	  |
+	|    |____|  	|	1|0|0	  |
+ B<-----|____| 	  	|	1|1|1  	  |	
+
+
+__________________________________________________________________________________________________________
+
+	+ = O
+
+	x = Y
+	
+	A + 0 = A (A + Falso)
+
+	A + 1 = 1 (A + 1 siempre va a ser verdadero)
+	
+	A y 0 = 0 (Siempre falso)
+
+	A y 1 = A (Depende de A) 
+
+	A + A = A (Depende de A)
+	    _
+	A + A = 1 (Porque si A es verdadero, el complemento es falso, y de todas formas se tiene que cumplir uno)
+	
+	AA = A
+	 _
+	AA = 0 (Porque verdadero y falso es falso. Y falso y verdadero es falso)
+	_
+	_
+	A = A
+
+	A+AB = A (Por distributiva (A(1+B) = A x 1 = A)
+	  _		   _	      _
+	A+AB = A + B (A+AB+AB = A+B(A+A) = A + B x 1)
+
+	(A+B)(A+C) = AA+AC+BA+BC (Distributiva) = A+AB+AC+BC = A+AC+BC = A+BC
+
+______________________________________________________________________________________________________________________________
+
+			Teoremas de De Morgan
+
+  	   __   _   _ 
+	1) XY = X + Y
+	   _____   _   _
+	2) X + Y = X x Y
+	   ____   _   _   _   _
+	3) ABCD = A + B + C + D
+	    ______________     ______	  ______     __ _   _ _ _ 
+	4) (AB + C)(A + BC) = (AB + C) + (A + BC) = (AB)C + A(B+C)
+
+_____________________________________________________________________________________________________
+	 
+
+	A|B|C|D|H						__
+	0|0|0|0|0						| \  =  AND
+	0|0|0|0|1		(CD+B)A = H			|_/
+	0|0|0|1|0						
+	0|0|0|1|1	SIEMPRE QUE A SEA 0, SIEMPRE DARÁ 0	___
+	0|0|1|0|0						\  \  =  OR
+	0|0|1|0|1   C_____					/__/
+	0|0|1|1|0	| \______
+	n|n|n|n|n   D___|_/	 |
+	1|1|1|1|1		 |_____     ___
+ 				    \  \____|  \
+	            B_______________/__/    |   |______H
+		    			    |	|
+		    A_______________________|__/
+
+_________________________________________________________________________________________________________________________________
+
+
+	AB+A(B+C)+B(B+C) = H
+	
+	AB + AC + AC + BB + BC =
+	
+	AB + AC + B + BC		SIMPLIFICACIÓN 
+	
+	AB + AC + B
+
+	--> AC + B = H
+			 
+          _____________________________	
+
+	    _____   __
+	F = AB+AC + ABC
+	    __   __   _   _
+	  = AB x AC + A x B x C
+		    _   _    _   _
+	  = (A + B)(A + C) + A x B x C
+            _   _   _   _   _   _   _   _   _   _
+          = A x A + A x C + B x A + B x C + A x B x C  
+	    _   _     _   __   __
+          = A + AC + AB + BC + ABC
+	    _   __   __   __ 
+	  = A + AB + BC + ABC
+            _   __   __ 
+	  = A + AB + BC 
+            _   __ 
+	  = A + BC
+
+	 

@@ -29,3 +29,4 @@ if(estado_boton==1)
 {
 estado_led=!estado_led;
 digitalWrite(13,estado_led);
+delay(1000);

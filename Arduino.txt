@@ -1,0 +1,31 @@
+void setup()
+{
+pinMode(4, INPUT);
+pinMode(13, OUTPUT);
+
+
+void loop()
+{
+if(digitalRead(4)==1
+{
+ digitalWrite(13,HIGH);
+ else
+{
+digitalWrite(13, LOW);
+
+____
+
+void setup()
+{
+pinMode(4, INPUT);
+pinMode(13, OUTPUT);
+
+int estado_led = 0;
+
+void loop()
+{
+int estado_boton = digitalRead(4);
+if(estado_boton==1)
+{
+estado_led=!estado_led;
+digitalWrite(13,estado_led);

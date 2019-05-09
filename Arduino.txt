@@ -27,7 +27,7 @@ int estado_estado;
 void loop()
 {
 int estado_boton = digitalRead(4);
-if(estado_boton==1)
+if(estado_boton==1 && estado_anterior == 0)
 {
 estado_led=!estado_led;
 digitalWrite(13,estado_led);
@@ -35,4 +35,25 @@ delay(1000);
 } 
 estado_anterior=estado_boton;
 estado_estado=estado_anterior;
+} 
+
+____
+
+void setup()
+{
+pinMode(4, INPUT);
+pinMode(13, OUTPUT);
+Serial.begin(9600);
+} 
+int estado_led = 0;
+int estado_anterior = 0;
+void loop()
+{
+int estado_boton = digitalRead(4);
+if(estado_boton==1 && estado_anterior == 0)
+{
+Serial.printIn("Apretaste el boton");
+} 
+estado_anterior=estado_boton;
+estado_led=estado_anterior;
 } 

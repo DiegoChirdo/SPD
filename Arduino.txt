@@ -47,12 +47,15 @@ Serial.begin(9600);
 } 
 int estado_led = 0;
 int estado_anterior = 0;
+int i = 9;
 void loop()
 {
 int estado_boton = digitalRead(4);
 if(estado_boton==1 && estado_anterior == 0)
 {
 Serial.printIn("Apretaste el boton");
+digitalWrite(i,HIGH)
+digitalWrite(i-1,LOW);
 } 
 estado_anterior=estado_boton;
 estado_led=estado_anterior;

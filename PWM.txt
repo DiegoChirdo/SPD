@@ -10,5 +10,5 @@ void loop()
 	analogWrite(10, i);
 	delay (100);
 	i++;
-	if(i==256) i = 0;
+	if(i==255) i = 0;
 }

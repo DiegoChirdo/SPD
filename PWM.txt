@@ -1,0 +1,14 @@
+void setup ()
+{
+	pinMode(10, OUTPUT);
+}
+
+int i = 0;
+
+void loop()
+{
+	analogWrite(10, i);
+	delay (100);
+	i++;
+	if(i==256) i = 0;
+}

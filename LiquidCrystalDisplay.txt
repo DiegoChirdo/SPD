@@ -1,0 +1,23 @@
+#include <LiquidCrystal.h>
+LiquidCrystal lcd(8, 13, 9, 4, 5, 6, 7);
+
+
+void setup()
+{
+  lcd.begin(16,2);
+  lcd.print("hola mundo");
+}
+
+void loop()
+{/*
+  lcd.setCursor(16,1);
+  int read = analogRead(A0);
+  if(read<1000)lcd.print("abajo ");
+  if(read<100)lcd.print("arriba ");
+  if(read<10)lcd.print("izquieda ");
+  lcd.print(read);
+  lcd.setCursor(11,1);
+  double volt = read * 0.0048875855;
+  lcd.print(volt);
+  lcd.print("V");
+*/}

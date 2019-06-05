@@ -1,0 +1,46 @@
+ void leerTeclas(int var);
+
+
+void setup ()
+{
+  //pinMode(0, OUTPUT);
+  Serial.begin(9600); 
+}
+
+int variable;
+
+void loop()
+{
+  variable= analogRead(A0);
+
+  leerTeclas(variable);
+  
+ }
+
+ void leerTeclas(int var)
+ {if(variable<72)
+  {
+  Serial.println("Derecha");
+  }
+  if(variable>72 && variable<200)
+  {
+  Serial.println("Arriba");
+  }
+   
+  if(variable>200 && variable<400)
+  {
+  Serial.println("Abajo");
+  }
+  if(variable>400 && variable<600)
+  {
+  Serial.println("Izquierda");
+  }
+  if(variable>600 && variable<1020)
+  {
+  Serial.println("Select");
+  }
+  if(variable>1021)
+  {
+    Serial.println(" ");
+  }
+ }
